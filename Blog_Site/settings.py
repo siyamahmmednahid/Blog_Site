@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'App_Blog',
     'App_Login',
     'crispy_forms',
+    'django_cleanup.apps.CleanupConfig',
 ]
 
 MIDDLEWARE = [
@@ -136,3 +137,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Crispy Forms
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
+# Sign Out Redirect
+LOGIN_URL = 'App_Login:signin'

@@ -4,7 +4,7 @@
 {% block body_block %}
 {% if registered %}
 <div class="alert alert-success">
-    <p>Registration successfull. <a href="">Sign in</a></p>
+    <p>Registration successfull. <a href="{% url 'App_Login:signin' %}">Sign in</a></p>
 </div>
 {% else %}
     <h3>Sign up</h3>
