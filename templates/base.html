@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title_block %} Page title {% endblock %}</title>
+    <link rel="icon" type="/media/images/Favicon.ico" href="/media/images/Favicon.ico">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Bootstrap JS -->
@@ -21,9 +22,12 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">Blogs</a>
+                      <a class="nav-link active" aria-current="page" href="{% url 'App_Blog:blogs' %}"><img src="/media/images/Logo.png" alt="Logo" width='50'></a>
                   </li>
                   {% if user.is_authenticated %}
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'App_Blog:add_blog' %}">Add Blog</a>
+                  </li>
                   <li class="nav-item">
                       <a class="nav-link" href="{% url 'App_Login:profile' %}">Profile</a>
                   </li>

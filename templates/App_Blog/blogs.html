@@ -1,5 +1,14 @@
 {% extends 'base.html' %}
 {% block title_block %}{% endblock %}
 {% block body_block %}
-<h3>Blog List</h3>
+
+<div class="row">
+    {% for blog in blog_posts %}
+    <div class="col-4">
+        <h3><a href="{% url 'App_Blog:blog_detail' blog_slug=blog.blog_slug %}">{{ blog.blog_title }}</a></h3>
+        <p>{{ blog.blog_content }}</p>
+    </div>
+    {% endfor %}
+</div>
+
 {% endblock %}

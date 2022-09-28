@@ -2,11 +2,11 @@
 {% block title_block %} {{ user.is_authenticated }} {% endblock %}
 {% block body_block %}
     {% if user.user_profile %}
-    <img src='/media/{{ user.user_profile.profile_pic }}' alt="Profile Pic" width='100'>
+    <img src='/media/{{ user.user_profile.profile_pic }}' alt="Profile Pic" width="100">
     <br>
     <a href="{% url 'App_Login:change_profile_pic' %}" class="btn btn-info">Change photo</a>
     {% else %}
-    <img src="/media/profile_pics/demo.jpg" alt="Profile Pic" >
+    <img src="/media/profile_pics/demo.jpg" alt="Profile Pic"  width="100" >
     <br>
     <a href="{% url 'App_Login:add_profile_pic' %}" class="btn btn-info">Change photo</a>
     {% endif %}
